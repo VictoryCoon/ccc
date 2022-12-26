@@ -3,6 +3,7 @@
 #include "LinkedList.h"			// Header
 #include "DoubleLinkedList.h"	// Header
 #include "String.h"				// Header
+#include "Tree.h"				// Header
 
 using namespace std;
 //#define AAA 4			// 전체정의, 컴파일은 느리지만, Runtime에서는 속도효율이 좋다
@@ -43,7 +44,7 @@ int main() {
 	list->Clear();
 	list->Prints();
 	*/
-
+	/*
 	String str = "ABCD ";
 	String str2 = str;
 	str2 += str;
@@ -58,6 +59,26 @@ int main() {
 	cout << str2.ToConst() << endl;
 	cout << str3.ToConst() << endl;
 	cout << c << endl;
+	*/
+
+	Tree tree;
+
+	tree.Insert(15);
+	tree.Insert(7);
+	tree.Insert(18);
+	tree.Insert(1);
+	tree.Insert(9);
+	tree.Insert(17);
+	tree.Insert(21);
+
+	cout << "============== PreOrder ==============" << endl;
+	tree.PreOrder();
+	cout << endl;
+	cout << "============== InOrder ==============" << endl;
+	tree.InOrder();
+	cout << endl;
+	cout << "============== PostOrder ==============" << endl;
+	tree.PostOrder();
 
 	return 0;
 }
